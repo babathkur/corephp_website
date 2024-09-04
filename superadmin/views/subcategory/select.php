@@ -59,11 +59,11 @@ $result = mysqli_query($conn, $query);
                         ?>
 
                             <tr>
-                                <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $i ?></strong></td>
+                                <td><strong><?= $i ?></strong></td>
                                 <td><?= $row['cat_name'] ?></td>
                                 <td><?= $row['subcat_name'] ?></td>
 
-                                <td colspan="2" class="text-center">
+                                <td class="text-center">
                                     <a class="btn btn-sm <?php echo $row['status'] == 'Active' ? 'btn-success' : 'btn-danger' ?>" href="subcategory&status=<?= $row['status'] ?>&id=<?= $row['sid'] ?>">
                                         <?= $row['status'] ?></a>
                                     <a class=" btn btn-primary btn-sm" href="subcategory-add&id=<?= $row['sid'] ?>">

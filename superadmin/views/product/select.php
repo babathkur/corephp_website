@@ -53,6 +53,7 @@ $result = mysqli_query($conn, $query);
                     <thead>
                         <tr>
                             <th>#</th>
+                            <th class="text-center">Actions</th>
                             <th>Category Name</th>
                             <th>Sub Category Name</th>
                             <th>Product Name</th>
@@ -65,7 +66,7 @@ $result = mysqli_query($conn, $query);
                             <th>GST</th>
                             <th>File Name</th>
 
-                            <th class="text-center">Actions</th>
+
                         </tr>
                     </thead>
                     <tbody class=" table-border-bottom-0">
@@ -76,7 +77,15 @@ $result = mysqli_query($conn, $query);
                         ?>
 
                             <tr>
-                                <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $i ?></strong></td>
+                                <td><strong><?= $i ?></strong></td>
+                                <td class="text-center">
+                                    <a class="btn btn-sm <?php echo $row['status'] == 'Active' ? 'btn-success' : 'btn-danger' ?>" href="product&status=<?= $row['status'] ?>&id=<?= $row['pid'] ?>">
+                                        <?= $row['status'] ?></a>
+                                    <a class=" btn btn-primary btn-sm" href="product-add&id=<?= $row['pid'] ?>">
+                                        Edit</a>
+
+
+                                </td>
                                 <td><?= $row['cat_name'] ?></td>
                                 <td><?= $row['subcat_name'] ?></td>
                                 <td><?= $row['product_name'] ?></td>
@@ -90,14 +99,7 @@ $result = mysqli_query($conn, $query);
                                 <td><img src="public/upload/product/<?php echo $row['file_name'] ?>" width="80px" alt="<?= $row['product_name'] ?>"></td>
 
 
-                                <td colspan="2" class="text-center">
-                                    <a class="btn btn-sm <?php echo $row['status'] == 'Active' ? 'btn-success' : 'btn-danger' ?>" href="product&status=<?= $row['status'] ?>&id=<?= $row['pid'] ?>">
-                                        <?= $row['status'] ?></a>
-                                    <a class=" btn btn-primary btn-sm" href="product-add&id=<?= $row['pid'] ?>">
-                                        Edit</a>
 
-
-                                </td>
                             </tr>
                         <?php
                             $i++;

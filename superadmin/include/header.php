@@ -110,7 +110,7 @@ if (!isset($_SESSION['username'])) {
                 <ul class="menu-inner py-1">
                     <!-- Dashboard -->
                     <li class="menu-item active">
-                        <a href="index.html" class="menu-link">
+                        <a href="dashboard" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Dashboard</div>
                         </a>
@@ -125,52 +125,36 @@ if (!isset($_SESSION['username'])) {
 
 
                     <li class="menu-item">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <a href="category" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-cube-alt"></i>
-                            <div data-i18n="Misc">Master</div>
+                            <div data-i18n="Basic">Category</div>
                         </a>
-                        <ul class="menu-sub">
-
-                            <li class="menu-item">
-                                <a href="category" class="menu-link">
-                                    <div data-i18n="Under Maintenance">Category</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="subcategory" class="menu-link">
-                                    <div data-i18n="Under Maintenance">Sub Category</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="banner" class="menu-link">
-                                    <div data-i18n="Error">Banner</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="gst" class="menu-link">
-                                    <div data-i18n="Error">GST</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="product" class="menu-link">
-                                    <div data-i18n="Error">Product</div>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
-                    <!-- Components -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
-                    <!-- Cards -->
+
                     <li class="menu-item">
-                        <a href="cards-basic.html" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Cards</div>
+                        <a href="subcategory" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                            <div data-i18n="Basic">Sub Category</div>
                         </a>
                     </li>
-                    <!-- User interface -->
-
-
-
+                    <li class="menu-item">
+                        <a href="banner" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                            <div data-i18n="Basic">Banner</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="gst" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                            <div data-i18n="Basic">GST</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="product" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                            <div data-i18n="Basic">Product</div>
+                        </a>
+                    </li>
                 </ul>
             </aside>
             <!-- / Menu -->

@@ -60,7 +60,7 @@ $result = mysqli_query($conn, $query);
                         ?>
 
                             <tr>
-                                <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $i ?></strong></td>
+                                <td> <strong><?= $i ?></strong></td>
                                 <td><?= $row['banner_name'] ?></td>
                                 <td><img src="public/upload/banner/<?php echo $row['banner_image'] ?>" width="80px" alt="<?= $row['banner_image'] ?>"></td>
 

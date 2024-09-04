@@ -51,24 +51,18 @@ if (isset($_POST['submit'])) {
             redirect('banner');
         }
     } else {
-        $checkQuery = "SELECT * from banner where banner_name = '$banner_name'";
-        $result = mysqli_query($conn, $checkQuery);
-        $numRows = mysqli_num_rows($result);
-        if ($numRows > 0) {
-            $err = "Banner already exists";
-        } else {
-            $imageName = $file_name['name'];
-            $imageTmpName = $file_name['tmp_name'];
-            $imageType = $file_name['type'];
-            $changeName = strtotime($created_at) . $imageName;
-            move_uploaded_file($imageTmpName, "./public/upload/banner/" . $changeName);
-            $query = "INSERT INTO banner (banner_name,banner_image) VALUES ('$banner_name','$changeName')";
 
-            $result = mysqli_query($conn, $query);
+        $imageName = $file_name['name'];
+        $imageTmpName = $file_name['tmp_name'];
+        $imageType = $file_name['type'];
+        $changeName = strtotime($created_at) . $imageName;
+        move_uploaded_file($imageTmpName, "./public/upload/banner/" . $changeName);
+        $query = "INSERT INTO banner (banner_name,banner_image) VALUES ('$banner_name','$changeName')";
 
-            if ($result) {
-                redirect('banner');
-            }
+        $result = mysqli_query($conn, $query);
+
+        if ($result) {
+            redirect('banner');
         }
     }
 }
